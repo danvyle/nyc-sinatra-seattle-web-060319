@@ -1,0 +1,17 @@
+<h2>Edit Figure</h2>
+
+<!-- add year_completed here -->
+<form action="/figures/<%=@figure.id%>" method="POST">
+  <input type="hidden" type="hidden" name="_method" value="patch"
+  <ul>
+    <li>
+    <label for="name">Name</label>
+    <input id="name" name="figure[name]" value="<%=@figure.name%>"><br>
+    </li>
+  </ul>
+  <input type="submit" value="Edit Figure">
+
+</form>
+
+<a class="button" href="/figures">Figures</a>
+<a class="button" href="/">Home</a>

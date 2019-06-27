@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td><%= @figure.name %></td>
+  </tr>
+
+  <tr>
+    <td><%= @figure.title_ids %></td>
+  </tr>
+
+  <tr>
+    <td><%= @figure.landmark_ids %></td>
+  </tr>
+
+  <tr>
+    <td><%= @figure.name %></td>
+  </tr>
+<table>
+
+<a class="button" href="/figures/<%= @figure.id %>/edit">Edit Figure</a>
+<a class="button" href="/figures">Figures</a>
+
+
+<label for="landmark_id">Figure Landmark</label><br>
+<input id="landmark_id" type = "text" name="figure[landmark_id][]"/><br>
+
+<label for="landmark_name">Landmark Name</label><br>
+<input id="landmark_name" type = "text" name="landmark[name]"/><br>
+
+<label for="title_name">Title Name</label><br>
+<input id="title_name" type = "text" name="title[name]"/><br>

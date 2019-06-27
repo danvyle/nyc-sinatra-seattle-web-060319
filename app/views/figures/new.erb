@@ -1,0 +1,42 @@
+<h2>Create Figure</h2>
+
+<form action="/figures" method="post">
+<label for="figure_name">Name</label><br>
+<input id="figure_name" type = "text" name="figure[name]"/><br>
+
+<h1>Titles</h1>
+<label for="title_id">Figure Title</label><br>
+<!-- <input id="title_ids" type = "text" name="figure[title_ids][]"/><br> -->
+
+<% @titles.each do |title| %>
+  <input type="checkbox" name="figure[title_id][]" id="<%=figure.title_id%>" type ="text"  value="<%=title.id%>" id="<%=title.id%>"<%=title.name%><br>
+<% end %>
+
+<!--
+Failure/Error: check "title_#{Title.first.id}"
+
+  Capybara::ElementNotFound:
+    Unable to find checkbox "title_26" -->
+
+
+
+
+<label for="landmark_ids">Figure Landmark</label><br>
+<input id="landmark_ids" type = "text" name="figure[landmark_ids][]"/><br>
+
+<label for="landmark_name">Landmark Name</label><br>
+<input id="landmark_name" type = "text" name="landmark[name]"/><br>
+
+<label for="title_name">Title Name</label><br>
+<input id="title_name" type = "text" name="title[name]"/><br>
+
+<input type="submit" value="Submit"><br>
+</form>
+
+<a class="button" href="/figures">Figures</a>
+<a class="button" href="/">Home</a>
+
+<!-- <div>
+  <input type="checkbox" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Dewey</label>
+</div> -->
