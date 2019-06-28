@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "name"
   end
 
-  create_table "figurestitles", force: :cascade do |t|
-    t.integer "title_ids"
-    t.integer "figure_ids"
+  create_table "figuretitles", force: :cascade do |t|
+    t.integer "title_id"
+    t.integer "figure_id"
   end
 
   create_table "landmarks", force: :cascade do |t|
